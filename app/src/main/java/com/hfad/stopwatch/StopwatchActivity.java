@@ -24,16 +24,18 @@ public class StopwatchActivity extends Activity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        running = wasRunning;
-    }
-
-    @Override
     protected void onStop() {
         super.onStop();
         wasRunning = running;
         running = false;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (wasRunning) {
+            running = true;
+        }
     }
 
     @Override
