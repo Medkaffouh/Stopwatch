@@ -23,16 +23,45 @@ public class StopwatchActivity extends Activity {
         runTimer();
     }
 
+    //@Override
+    //protected void onStop() {
+    //    super.onStop();
+    //    wasRunning = running;
+    //    running = false;
+    //}
+
+    //@Override
+    //protected void onStart() {
+    //    super.onStart();
+    //    if (wasRunning) {
+    //        running = true;
+    //    }
+    //}
+
+
+    /*The onPause() method is
+    called when the activity
+    is paused or stopped.
+    This means we only
+    need to implement the
+    onPause() method.*/
     @Override
-    protected void onStop() {
-        super.onStop();
+    protected void onPause() {
+        super.onPause();
         wasRunning = running;
         running = false;
     }
 
+    /*The onResume() method is called
+    when the activity is started or
+    resumed. As we want the app to
+    do the same thing irrespective of
+    whether it’s started or resumed,
+    we only need to implement the
+    onResume() method.*/
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onResume() {
+        super.onResume();
         if (wasRunning) {
             running = true;
         }
