@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stopwatch">
         <activity
+            android:name=".SendMessageActivity"
+            android:exported="false" />
+        <activity
             android:name=".StopwatchActivity"
             android:exported="true">
             <intent-filter>

@@ -39,12 +39,14 @@ public class StopwatchActivity extends Activity {
     //}
 
 
-    /*The onPause() method is
+    /*
+    The onPause() method is
     called when the activity
     is paused or stopped.
     This means we only
     need to implement the
-    onPause() method.*/
+    onPause() method.
+    */
     @Override
     protected void onPause() {
         super.onPause();
@@ -52,13 +54,15 @@ public class StopwatchActivity extends Activity {
         running = false;
     }
 
-    /*The onResume() method is called
+    /*
+    The onResume() method is called
     when the activity is started or
     resumed. As we want the app to
     do the same thing irrespective of
     whether it’s started or resumed,
     we only need to implement the
-    onResume() method.*/
+    onResume() method.
+    */
     @Override
     protected void onResume() {
         super.onResume();
